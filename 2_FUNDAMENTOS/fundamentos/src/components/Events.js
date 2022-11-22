@@ -2,7 +2,8 @@ const Events = () => {
 
   const handleMyEvent = (e) => {
     console.log('clicou');
-    console.log(e);
+    console.log(e.type);
+    console.log(e.type==='click' ? 'Yeess Click!!': 'Noooo Click')
   };
 
   return(
