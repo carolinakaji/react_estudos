@@ -6,6 +6,7 @@ import Events from './components/Events';
 
 // styles/ CSS
 import './App.css';
+import NewEvent from './components/NewEvent';
 
 function App() {
   // Testando os comentários
@@ -18,6 +19,7 @@ function App() {
       <TemplateExpressions />
       <MyComponent />
       <Events />
+      <NewEvent />
 
     </div>
   );
