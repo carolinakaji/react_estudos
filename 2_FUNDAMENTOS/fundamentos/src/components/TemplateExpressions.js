@@ -10,6 +10,7 @@ const TemplateExpressions = () => {
       <h1>{name}</h1>
       <p>Age: {data.age}</p>
       <p>Job: {data.job}</p>
+      <p>{10 + 5}</p>
     </div>
   );
 }
