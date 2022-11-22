@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+.texto-verde {
+  color: #C0D8C0;
+  padding: 15px;
+  background-color: #F5EEDC;
+  font-weight: bold;
+  font-size: 32px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
