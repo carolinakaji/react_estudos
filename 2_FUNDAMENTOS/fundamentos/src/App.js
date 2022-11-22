@@ -1,6 +1,7 @@
 // components
 import FirstComponent from './components/FirstComponent';
 import TemplateExpressions from './components/TemplateExpressions'
+import MyComponent from './components/MyComponent';
 
 // styles/ CSS
 import './App.css';
@@ -14,6 +15,8 @@ function App() {
       <h2>Criando componente</h2>
       <FirstComponent />
       <TemplateExpressions />
+      <MyComponent />
+
     </div>
   );
 }
