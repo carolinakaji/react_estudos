@@ -7,6 +7,7 @@ import Events from './components/Events';
 // styles/ CSS
 import './App.css';
 import NewEvent from './components/NewEvent';
+import Challenge from './components/Challenge';
 
 function App() {
   // Testando os comentários
@@ -20,6 +21,8 @@ function App() {
       <MyComponent />
       <Events />
       <NewEvent />
+
+      <Challenge />
 
     </div>
   );
