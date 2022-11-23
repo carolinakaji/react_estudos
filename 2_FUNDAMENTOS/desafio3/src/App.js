@@ -1,5 +1,6 @@
 import './App.css';
 import Img2 from './assets/img2.jpg'
+import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 
 function App() {
@@ -20,6 +21,10 @@ function App() {
       {/* useState Hook */}
       <div>
         <ManageData />
+      </div>
+      {/* Render List*/}
+      <div>
+        <ListRender />
       </div>
     </div>
   );
