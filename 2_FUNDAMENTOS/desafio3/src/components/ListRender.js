@@ -21,6 +21,7 @@ const ListRender = () => {
 
       {/* The best way to use a key is associating it to the id that comes from database.  */}
           <ul>
+            {/* Pushing a new product {products.push({id: 128, product: 'Sofa', price: 800.00})}*/}
             {products.map((product) => (
               <li key={product.id}>{product.product} - U${product.price}</li>
             ))}
