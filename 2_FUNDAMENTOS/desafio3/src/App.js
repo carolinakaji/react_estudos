@@ -3,8 +3,14 @@ import Img2 from './assets/img2.jpg'
 import ConditionalRender from './components/ConditionalRender';
 import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
+import ShowUserName from './components/ShowUserName';
+
+import {useState} from 'react';
 
 function App() {
+  const name = "Carol";
+  const [userName] = useState('Maria');
+
   return (
     <div className="App">
       <h1>Avançando no React</h1>
@@ -30,6 +36,11 @@ function App() {
 
       <div>
         <ConditionalRender />
+      </div>
+
+      <div>
+        <ShowUserName name={name}/>
+        <ShowUserName name={userName}/>
       </div>
     </div>
   );
