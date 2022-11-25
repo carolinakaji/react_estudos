@@ -6,6 +6,7 @@ import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 
 import {useState} from 'react';
+import { CarDetails } from './components/CarDetails';
 
 function App() {
   const name = "Carol";
@@ -41,6 +42,10 @@ function App() {
       <div>
         <ShowUserName name={name}/>
         <ShowUserName name={userName}/>
+      </div>
+
+      <div>
+        <CarDetails brand="BMW" km={50000} color="black"/>
       </div>
     </div>
   );
