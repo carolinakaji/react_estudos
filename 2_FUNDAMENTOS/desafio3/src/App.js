@@ -5,7 +5,7 @@ import ListRender from './components/ListRender';
 import ManageData from './components/ManageData';
 import ShowUserName from './components/ShowUserName';
 
-import {useState} from 'react';
+import { useState } from 'react';
 import { CarDetails } from './components/CarDetails';
 
 function App() {
@@ -35,17 +35,22 @@ function App() {
         <ListRender />
       </div>
 
+      {/* Conditional Render*/}
       <div>
         <ConditionalRender />
       </div>
 
+      {/* Destructuring*/}
       <div>
-        <ShowUserName name={name}/>
-        <ShowUserName name={userName}/>
+        <ShowUserName name={name} />
+        <ShowUserName name={userName} />
       </div>
 
+      {/* Reusing component*/}
       <div>
-        <CarDetails brand="BMW" km={50000} color="black"/>
+        <CarDetails brand="BMW" km={50000} color="Black" />
+        <CarDetails brand="Fiat" km={90000} color="Red" />
+        <CarDetails brand="Honda" km={0} color="Blue" />
       </div>
     </div>
   );
