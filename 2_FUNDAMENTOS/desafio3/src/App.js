@@ -7,15 +7,16 @@ import ShowUserName from './components/ShowUserName';
 
 import { useState } from 'react';
 import { CarDetails } from './components/CarDetails';
+import Container from './components/Container';
 
 function App() {
   const name = "Carol";
   const [userName] = useState('Maria');
 
   const cars = [
-    {id: 1, brand:"BMW", km:0, color:"Black", newCar:false},
-    {id: 2, brand:"Ferrari", km:2000, color:"Yellow", newCar:false},
-    {id: 3, brand:"Audi", km:1000, color:"White", newCar:false},
+    { id: 1, brand: "BMW", km: 0, color: "Black", newCar: false },
+    { id: 2, brand: "Ferrari", km: 2000, color: "Yellow", newCar: false },
+    { id: 3, brand: "Audi", km: 1000, color: "White", newCar: false },
   ]
 
   return (
@@ -54,9 +55,9 @@ function App() {
 
       {/* Reusing component*/}
       <div>
-        <CarDetails brand="BMW" km={50000} color="Black" newCar={false}/>
-        <CarDetails brand="Fiat" km={90000} color="Red" newCar={false}/>
-        <CarDetails brand="Honda" km={0} color="Blue" newCar={true}/>
+        <CarDetails brand="BMW" km={50000} color="Black" newCar={false} />
+        <CarDetails brand="Fiat" km={90000} color="Red" newCar={false} />
+        <CarDetails brand="Honda" km={0} color="Blue" newCar={true} />
       </div>
       {/* Rendering List Component */}
       <div>
@@ -64,6 +65,15 @@ function App() {
         {cars.map((cars) => (
           <CarDetails brand={cars.brand} km={cars.km} color={cars.color} newCar={cars.newCar} />
         ))}
+      </div>
+      {/* Children prop */}
+      <div>
+        <Container valueTesting='Value'>
+          <h1>Este é o conteúdo</h1>
+        </Container>
+        <Container valueTesting='Outro componente'>
+          <h3>Outro conteúdo</h3>
+        </Container>
       </div>
     </div>
   );
