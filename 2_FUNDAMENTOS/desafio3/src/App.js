@@ -12,6 +12,12 @@ function App() {
   const name = "Carol";
   const [userName] = useState('Maria');
 
+  const cars = [
+    {id: 1, brand:"BMW", km:0, color:"Black", newCar:false},
+    {id: 2, brand:"Ferrari", km:2000, color:"Yellow", newCar:false},
+    {id: 3, brand:"Audi", km:1000, color:"White", newCar:false},
+  ]
+
   return (
     <div className="App">
       <h1>Avançando no React</h1>
@@ -48,9 +54,16 @@ function App() {
 
       {/* Reusing component*/}
       <div>
-        <CarDetails brand="BMW" km={50000} color="Black" />
-        <CarDetails brand="Fiat" km={90000} color="Red" />
-        <CarDetails brand="Honda" km={0} color="Blue" />
+        <CarDetails brand="BMW" km={50000} color="Black" newCar={false}/>
+        <CarDetails brand="Fiat" km={90000} color="Red" newCar={false}/>
+        <CarDetails brand="Honda" km={0} color="Blue" newCar={true}/>
+      </div>
+      {/* Rendering List Component */}
+      <div>
+        <h2>Rendering List - Array of Objects - Map</h2>
+        {cars.map((cars) => (
+          <CarDetails brand={cars.brand} km={cars.km} color={cars.color} newCar={cars.newCar} />
+        ))}
       </div>
     </div>
   );
