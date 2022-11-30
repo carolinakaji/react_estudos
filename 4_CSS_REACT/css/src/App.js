@@ -1,7 +1,11 @@
 import './App.css';
 import MyComponent from './components/MyComponent';
+import {useState} from 'react';
 
 function App() {
+  const n = 15;
+  const [name] = useState("Carol")
+
   return (
     <div className="App">
       {/* CSS global */}
@@ -17,6 +21,10 @@ function App() {
       <p style={{color: "blue", padding:"25px", borderTop:"2px solid red", backgroundColor: "#fff"}}>Este elemento foi estilizado de forma inline</p>
       <p style={{color: "magenta", padding:"25px", borderTop:"2px solid red", backgroundColor: "#fff"}}>Este elemento foi estilizado de forma inline</p>
 
+      {/* CSS inline dinâmico */}
+      <h2 style={n < 10 ? {color: "purple"} : {color: "pink"}}>CSS Dinamico - true</h2>
+      <h2 style={n > 10 ? {color: "purple"} : {color: "pink"}}>CSS Dinamico - false</h2>
+      <h2 style={name === 'Carol' ? {backgroundColor: "#FBE6D4", color: "#B9AC92"}: null}>CSS Dinamico - useState</h2>
     </div>
   );
 }
