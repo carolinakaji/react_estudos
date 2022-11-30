@@ -9,6 +9,9 @@ function App() {
 
       {/* CSS de Componente */}
       <MyComponent />
+      <p>Este é o parágrafo do 
+        App.js
+      </p>
     </div>
   );
 }

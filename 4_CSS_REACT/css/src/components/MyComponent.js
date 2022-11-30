@@ -2,7 +2,11 @@ import './MyComponent.css';
 
 const MyComponent = () => {
   return (
-    <h2>CSS de componente</h2>
+    <div>
+      <h1>CSS de componente</h1>
+      <p>Este é o parágrafo do componente</p>
+      <p className='my-comp-paragraph'>Este também é parágrafo do componente</p>
+    </div>
   )
 }
 
