@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  margin-bottom: 500px;
 }
 
 .App-logo {
@@ -29,13 +28,6 @@
   color: #61dafb;
 }
 
-.img_gram {
-  max-width: 50vh;
-}
-
-.card_container {
-  margin: 2rem;
-}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
