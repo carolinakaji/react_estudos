@@ -8,3 +8,16 @@ body {
 h1 {
   color: red;
 }
+
+.red-title {
+  color: #DD4A48;
+  background-color: lightgray;
+  padding: 20px;
+  border: 5px solid #DD4A48;
+}
+.title {
+  color: aquamarine;
+  background-color: black;
+  padding: 20px;
+  border: 5px solid aquamarine;
+}
