@@ -10,18 +10,24 @@ const handleName = (e) => {
   setName(e.target.value);
 }
 // console.log(name)
-console.log(email)
+// console.log(email)
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  console.log(name, email)
+}
 
   return (
     <div>
+      {/* 5 - Envio de form */}
       {/* 1 - Criação de form*/}
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Nome:</label>
           <input type="text" name="name" placeholder="Digite seu nome" onChange={handleName}/>
         </div>
         {/* 2 - label envolvendo input - doc indica esta abordagem*/}
-        {/* 3 - alteração do state inline. No onChange, colocar a função chamando o setState */}
+        {/* 4 - alteração do state inline. No onChange, colocar a função chamando o setState */}
         <div>
           <label>
             <span>E-mail:</span>
