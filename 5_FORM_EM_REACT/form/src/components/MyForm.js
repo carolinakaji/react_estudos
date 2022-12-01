@@ -16,6 +16,10 @@ const MyForm = ({ user }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(name, email)
+
+    // 7 - Limpar form
+    setName("");
+    setEmail("");
   }
 
   return (
