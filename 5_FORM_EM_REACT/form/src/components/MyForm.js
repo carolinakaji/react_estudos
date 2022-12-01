@@ -9,7 +9,8 @@ const [email, setEmail] = useState();
 const handleName = (e) => {
   setName(e.target.value);
 }
-console.log(name)
+// console.log(name)
+console.log(email)
 
   return (
     <div>
@@ -20,10 +21,11 @@ console.log(name)
           <input type="text" name="name" placeholder="Digite seu nome" onChange={handleName}/>
         </div>
         {/* 2 - label envolvendo input - doc indica esta abordagem*/}
+        {/* 3 - alteração do state inline. No onChange, colocar a função chamando o setState */}
         <div>
           <label>
             <span>E-mail:</span>
-            <input type="email" name="email" placeholder="Digite o seu e-mail" />
+            <input type="email" name="email" placeholder="Digite o seu e-mail" onChange={(e) => (setEmail(e.target.value))}/>
           </label>
         </div>
         <input type="submit" value="Enviar" />
