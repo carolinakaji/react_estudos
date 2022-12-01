@@ -6,6 +6,7 @@ const MyForm = ({ user }) => {
   // 3 - Gerenciamento de dados
   const [name, setName] = useState(user ? user.name : '');
   const [email, setEmail] = useState(user ? user.email : '');
+  const [bio, setBio] = useState("");
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -15,11 +16,12 @@ const MyForm = ({ user }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email)
+    console.log(name, email, bio)
 
     // 7 - Limpar form
     setName("");
     setEmail("");
+    setBio("");
   }
 
   return (
@@ -29,26 +31,36 @@ const MyForm = ({ user }) => {
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Nome:</label>
-          <input 
-          type="text" 
-          name="name" 
-          placeholder="Digite seu nome" 
-          onChange={handleName} 
-          value={name}/>
+          <input
+            type="text"
+            name="name"
+            placeholder="Digite seu nome"
+            onChange={handleName}
+            value={name} />
         </div>
         {/* 2 - label envolvendo input - doc indica esta abordagem*/}
         {/* 4 - alteração do state inline. No onChange, colocar a função chamando o setState */}
-        <div>
-          <label>
-            <span>E-mail:</span>
-            <input 
-            type="email" 
-            name="email" 
-            placeholder="Digite o seu e-mail" 
-            onChange={(e) => (setEmail(e.target.value))} 
-            value={email}/>
-          </label>
-        </div>
+
+        <label>
+          <span>E-mail:</span>
+          <input
+            type="email"
+            name="email"
+            placeholder="Digite o seu e-mail"
+            onChange={(e) => (setEmail(e.target.value))}
+            value={email} />
+        </label>
+
+        {/* 8- Textarea */}
+        <label>
+          <span>Sobre</span>
+          <textarea 
+          name="bio"
+          value={bio}
+          onChange={(e) => (setBio(e.target.value))}
+          placeholder="Diga algo sobre você!"></textarea>
+        </label>
+
         <input type="submit" value="Enviar" />
       </form>
     </div>
